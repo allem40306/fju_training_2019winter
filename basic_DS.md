@@ -118,6 +118,24 @@ int main(){
     cout<<st.front()<<'\n';// 2
 }
 ```
+----
+## ZeroJudge d555
+* 在平面上如果有兩個點 (x,y) 與 (a,b),我們說 (x,y) 支配(Dominate)了(a,b)這就是指 x $\geq$ a，而且 y $\geq$ b；用圖來看就是 (a,b) 座落在以 (x,y) 為右上角的一點無的區域中。
+* 對於平面上的任意一個有限點集合而言，一定存在有若干個點，它們不會被集合中的內一點所支配，這些個數就構成一個所謂的極大集合。請寫一個程式，讀入一個新的集合，找出這個集合中的極大值。
+* 簡單的說  若找不到一點在 (x,y) 的右上方,則 (x,y) 就要輸出 
+----
+## 單調性
+* 先以Y值排序由大到小排序，X值會由小到大
+----
+## 題目
+* UVa514(Stack 應用)
+* UVa673(Stack 應用)
+* ZeroJudge d016(Stack 後續運算法)
+* UVa10935(Queue 應用)
+* UVa12100(Queue 應用)
+* Uva246(Deque 應用)
+* UVa11781(stack 單調)
+* TIOJ1618(Deque 單調)
 ------
 # Part2
 * list
@@ -157,6 +175,11 @@ int main(){
     }  
 }
 ```
+----
+## 題目
+* ZeroJudge d718
+* TIOJ 1225
+* TIOJ 1930
 ------
 # Part3
 * Vector
@@ -242,6 +265,10 @@ The sum is 28
 ## bitset
 * 節省的bool陣列
 * 可當二進位位元運算
+----
+## 題目
+* ZeroJudge a011(getline 應用)
+* Zerojudge d098(StringStream 應用，請自行查詢)
 ------
 # Part4
 * priorty_queue
@@ -294,6 +321,10 @@ int main(){
     cout<<Q.top()<<'\n';// 3
 }
 ```
+----
+## 題目
+* Uva 10954
+* Uva 1203
 ------
 # Part5
 * Pair
@@ -392,3 +423,9 @@ owo : find
 * 沒有lower\_bound/upper\_bound
 * 也不會依鍵值大小遍歷
 * 迭代器為單向
+----
+## 題目
+* ZeroJudge d512(Set 應用)
+* UVa 10815(Set 應用)
+* Zerojudge d518(Map 應用)
+* UVa 484(Map 應用)
