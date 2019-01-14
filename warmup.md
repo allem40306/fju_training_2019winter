@@ -32,11 +32,11 @@
 * static
 * 全域
 ------
-# 遞迴
+# 函式
 ----
 ## 語法
 ```cpp=
-return_type function_name(paremeter list){
+return_type function_name(parameter list){
     Do something...
     return data;// void need not return;
 }
