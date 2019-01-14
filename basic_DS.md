@@ -159,7 +159,7 @@ int main(){
 * UVa10935(Queue 應用)
 * UVa12100(Queue 應用)
 * Uva246(Deque 應用)
-* UVa11781(stack 單調)
+* UVa11871(stack 單調)
 * TIOJ1618(Deque 單調)
 ------
 # Part2
