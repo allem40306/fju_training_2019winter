@@ -46,7 +46,7 @@ struct stack{
         return top;
     }
     void push(int x){
-        st[top++]=x;
+        st[++top]=x;
     }
     int top(){
         assert(top>0)
