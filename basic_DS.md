@@ -119,6 +119,31 @@ int main(){
 }
 ```
 ----
+## deque
+* 有兩個端口，皆負責刪除、插入的資料結構
+----
+```cpp
+#include <iostream>
+#include <deque>
+using namespace std;
+
+int main(){
+	deque<int>dq;
+	dq.push_back(1);
+	cout<<dq.front()<<' '<<dq.back()<<'\n';// 1 1
+	dq.push_back(2);
+	cout<<dq.front()<<' '<<dq.back()<<'\n';// 1 2
+	dq.push_back(3);
+	cout<<dq.front()<<' '<<dq.back()<<'\n';// 1 3
+	dq.pop_front();
+	cout<<dq.front()<<' '<<dq.back()<<'\n';// 2 3
+	dq.push_front(4);
+	cout<<dq.front()<<' '<<dq.back()<<'\n';// 4 3
+	dq.pop_back();
+	cout<<dq.front()<<' '<<dq.back()<<'\n';// 4 2
+}
+```
+----
 ## ZeroJudge d555
 * 在平面上如果有兩個點 (x,y) 與 (a,b),我們說 (x,y) 支配(Dominate)了(a,b)這就是指 x $\geq$ a，而且 y $\geq$ b；用圖來看就是 (a,b) 座落在以 (x,y) 為右上角的一點無的區域中。
 * 對於平面上的任意一個有限點集合而言，一定存在有若干個點，它們不會被集合中的內一點所支配，這些個數就構成一個所謂的極大集合。請寫一個程式，讀入一個新的集合，找出這個集合中的極大值。
