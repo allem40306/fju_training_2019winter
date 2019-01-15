@@ -395,7 +395,7 @@ int main(){
 * 插入
 * 刪除
 * 尋找值
-* 尋找lower_bound、upeer_bound
+* 尋找lower_bound、upper_bound
 ----
 ## Set&Map
 * Set回傳鍵值(key value)
