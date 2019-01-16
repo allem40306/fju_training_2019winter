@@ -109,6 +109,7 @@ while(r−l>EPS){
 * Uva 714
 * Uva 1421
 * Uva 11627
+* zerojudge d732
 * neoj 72(三分搜)
 ------
 # 分治
