@@ -8,7 +8,7 @@
 * 枚舉
 * 貪心(Greedy)
 * 二分搜(Binary Search)
-* 分治(Divide and)
+* 分治(Divide and Conquer)
 ------
 # 枚舉
 ----
