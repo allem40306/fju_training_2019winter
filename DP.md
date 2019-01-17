@@ -107,7 +107,7 @@ int f(){
 以防在DP的過程不小心用到，湊不出來的狀態要設成負無限大，或是使用if判斷取代預設。
 ----
 ```cpp
-dp[N][C];
+int dp[N][C];
 memset(dp,-INF,sizeof(dp));
 dp[0][0]=0;
 for(int i=0;i<N;i++){
@@ -120,9 +120,9 @@ for(int i=0;i<N;i++){
 * 時間空間複雜度皆為$O(NC)$
 * 空間可優化
 ----
-利用滾動陣列降為$O(2N)$ 
+利用滾動陣列降為$O(2C)$ 
 ```cpp
-dp[N][C];
+int dp[2][C];
 memset(dp,-INF,sizeof(dp));
 dp[0][0]=0;
 for(int i=0;i<N;i++){
@@ -132,13 +132,13 @@ for(int i=0;i<N;i++){
 }
 ```
 ----
-由後向前轉移，再降為$O(N)$
+由後向前轉移，再降為$O(C)$
 ```cpp
-dp[N];
+int dp[C];
 memset(dp,-INF,sizeof(dp));
 dp[0]=0;
 for(int i=0;i<N;i++){
-    for(int j=C;j>=w[j];j--){
+    for(int j=C;j>=w[i];j--){
         dp[j]=max(dp[j−w[i]]+v[i],dp[j]);
     }
 }
@@ -154,13 +154,13 @@ for(int i=0;i<N;i++){
 ----
 時間複雜度為$O(NC\Sigma\frac{C}{w_i})$
 ```cpp
-dp[N];
+int dp[C];
 memset(dp,-INF,sizeof(dp));
 dp[0]=0;
 for(int i=0;i<N;i++){
     for(int j=w[i];j<=C;j++){
-        for(int k=1;k*w[i]<=C;k++){
-            dp[j]=max(dp[j−w[i]]+v[i],dp[j]);
+        for(int k=1;j-k*w[i]>=0;k++){
+            dp[j]=max(dp[j−k*w[i]]+k*v[i],dp[j]);
         }
     }
 }
@@ -173,6 +173,7 @@ for(int i=0;i<N;i++){
 ----
 複雜度$O(NC)$
 ```cpp
+int dp[C];
 memset(dp,-INF,sizeof(dp));
 dp[0]=0;
 for(int i=0;i<N;i++){
@@ -188,6 +189,13 @@ for(int i=0;i<N;i++){
 * 時間複雜度為$O(NC\Sigma a_i)$
 * 用二進位角度，複雜度可壓到$O(NC\Sigma(\log a_i))$
 * 單調對列優化，再降到$O(NC)$
+----
+## 題目
+* zerojudge b184(01背包)
+* UVa10664(01背包)
+* UVa10898(無限背包)
+* Uva10086(有限背包)
+* TIOJ 1387(有限背包)
 ------
 # LCS
 最長共同子序列 (Longest Common Subsequence)
