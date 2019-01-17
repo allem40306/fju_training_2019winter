@@ -222,7 +222,7 @@ for(int i=0;i<N;i++){
 ## DP式
 * 狀態：$dp[n][i]$ $=$ 使用 $1$到$n$ 個數字湊出長度 $i$ 的 LIS,末端數字最小為何。
 * 轉移：$dp[n][i] =min(dp[n-1][i],a[n])\  if\ a[n]>dp[n-1][i-1]$ $dp[n-1][i]\ else$
-* 基底：$dp[i][0] = INF, dp[0][j] = -INF$ when $i \geq 0$ and $j \geq 1$
+* 基底：$dp[0][0] = -INF, dp[0][i] = INF, dp[i][0]=don't$ $care$ when $i \geq 1$
 ----
 * 時間複雜度為$O(n^2)$
 ----
