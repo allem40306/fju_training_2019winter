@@ -350,7 +350,7 @@ void bellman_ford(int s){
         }
     }
 }
-void has_negative_cycle(){
+bool has_negative_cycle(){
     for(int i=0;i<V;i++){
         for(int j=0;j<V;j++){
             if(d[i]+w[i][j]<d[j])return true;
@@ -370,7 +370,7 @@ void has_negative_cycle(){
 * 並把所有與該點相連的邊鬆弛
 * 已經加入的點不會在被鬆弛
 * 使用priority\_queue的複雜度為$O((V+E)\log E)$
-* 使用費波那契堆複雜度為s$O(E+V\log V)$
+* 使用費波那契堆複雜度為$O(E+V\log V)$
 ----
 ```cpp
 struct edge{
